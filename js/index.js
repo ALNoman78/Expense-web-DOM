@@ -30,6 +30,13 @@ document.getElementById("calculate").addEventListener("click", function () {
 
       const remainingAmount = document.getElementById('remaining-balance');
       remainingAmount.innerText = remainingBalance.toFixed(2)
-        });
+    });
+
 });
 
+
+  // append history transaction history using append child function
+  
+  // const appendElement = document.getElementById('results')
+  // console.log(appendElement);
+  // document.getElementById('history-list').append(appendElement)
