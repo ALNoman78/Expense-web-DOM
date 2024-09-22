@@ -15,6 +15,22 @@ document.getElementById("calculate").addEventListener("click", function () {
     const balance = document.getElementById("balance");
     balance.innerText = availableBalance.toFixed(2);
 
+    // history section
+
+    const historySection = document.getElementById('history-list');
+
+    const newHistory = document.createElement('div')
+    newHistory.className = 'bg-white p-3 rounded-xl border-l-2 border-solid border-indigo-500'
+    newHistory.innerHTML = `
+        <div>
+          <p class="text-xs text-gray-500 font-medium">${new Date().toLocaleDateString()}</p>
+          <p class = "text-sm font-light">Income ${income} :</p>
+          <p>Expense ${totalExpense} :</p>
+          <p> Balance ${availableBalance} :</p>
+        </div>
+    `
+    historySection.appendChild(newHistory)
+
     document
         .getElementById("calculate-savings")
         .addEventListener("click", function () {
@@ -35,8 +51,3 @@ document.getElementById("calculate").addEventListener("click", function () {
 });
 
 
-  // append history transaction history using append child function
-  
-  // const appendElement = document.getElementById('results')
-  // console.log(appendElement);
-  // document.getElementById('history-list').append(appendElement)
